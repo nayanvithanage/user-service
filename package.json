@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/nayanvithanage/user-service/issues"
   },
-  "homepage": "https://github.com/nayanvithanage/user-service#readme"
+  "homepage": "https://github.com/nayanvithanage/user-service#readme",
+  "dependencies": {
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7"
+  }
 }
