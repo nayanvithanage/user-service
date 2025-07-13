@@ -26,7 +26,8 @@ jobs:
           --health-retries 5
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v3
 
     - name: Use Node.js
       uses: actions/setup-node@v3
@@ -34,12 +35,14 @@ jobs:
         node-version: 18
 
     - name: Install dependencies
+      working-directory: ./user-service
       run: npm install
 
     - name: Run Sequelize Sync (simple test)
+      working-directory: ./user-service
       env:
         DB_NAME: exploresl
         DB_USER: postgres
-        DB_PASS: postgres
+        DB_PASS: 1212
         DB_HOST: localhost
       run: node index.js
