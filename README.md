@@ -1,9 +1,10 @@
 Tourism Platform – Microservice Architecture
 🎯 GOAL (Phase 1)
+
 Build a backend system for a tourism business platform in modular microservices:
 ✅ Start with:
-	• User Service → manages users (traveler, provider, admin)
-	• Built using: Node.js + PostgreSQL + Sequelize
+- User Service → manages users (traveler, provider, admin)
+- Built using: Node.js + PostgreSQL + Sequelize
 
 🧱 WHAT YOU'LL LEARN & DO NOW
 
