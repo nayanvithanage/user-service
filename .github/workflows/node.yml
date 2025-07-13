@@ -28,18 +28,20 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
+    - name: Change to user-service folder
+      run: cd user-service
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        cd user-service
+        npm install
 
-    - name: Run Sequelize Sync (simple test)
+    - name: Run Sequelize Sync
       env:
         DB_NAME: exploresl
         DB_USER: postgres
         DB_PASS: postgres
         DB_HOST: localhost
-      run: node index.js
+      run: |
+        cd user-service
+        node index.js
